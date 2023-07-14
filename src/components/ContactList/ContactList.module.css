@@ -1,5 +1,4 @@
 .container {
-    width: 400px;
     padding: 20px 15px;
     margin: 20px auto;
     border: 2px solid rgb(0, 0, 0);
@@ -11,4 +10,13 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.contactsEmptyText {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.04em;
 }

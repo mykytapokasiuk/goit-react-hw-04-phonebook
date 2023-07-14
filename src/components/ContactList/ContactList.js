@@ -4,7 +4,9 @@ import ContactListItem from '../ContactListItem/ContactListItem.js';
 import css from './ContactList.module.css';
 
 const ContactList = ({ filteredContacts, onRemoveContact }) => {
-  return (
+  return filteredContacts.length === 0 ? (
+    <p className={css.contactsEmptyText}>No contact</p>
+  ) : (
     <div className={css.container}>
       <ul className={css.contactList}>
         {filteredContacts.map(({ id, name, number }) => (

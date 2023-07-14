@@ -22,6 +22,7 @@ h2 {
 
 .contactsEmptyText {
     margin-top: 20px;
+    text-align: center;
     font-size: 30px;
     font-weight: 800;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);

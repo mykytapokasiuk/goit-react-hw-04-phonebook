@@ -10,6 +10,11 @@ const App = () => {
   const [contacts, setContacts] = useState(parsedContacts);
   const [filter, setFilter] = useState('');
 
+  useEffect(() => {
+    const stringifiedContacts = JSON.stringify(contacts);
+    localStorage.setItem('contacts', stringifiedContacts);
+  }, [contacts]);
+
   function getLocalContacts() {
     const localContacts = localStorage.getItem('contacts');
     return JSON.parse(localContacts) || [];
@@ -44,11 +49,6 @@ const App = () => {
     );
   };
   const filteredContacts = getFilteredContacts();
-
-  useEffect(() => {
-    const stringifiedContacts = JSON.stringify(contacts);
-    localStorage.setItem('contacts', stringifiedContacts);
-  }, [contacts]);
 
   return (
     <div className={css.app}>
