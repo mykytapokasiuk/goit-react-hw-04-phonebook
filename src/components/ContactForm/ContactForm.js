@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 
 const ContactForm = ({ onAddContact }) => {
   const [state, setState] = useState({ name: '', number: '' });
-  const contactNameId = nanoid();
-  const contactNumberId = nanoid();
+  const contactNameId = useId();
+  const contactNumberId = useId();
 
   const handleChange = event => {
     const { name, value } = event.target;
